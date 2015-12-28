@@ -35,7 +35,8 @@ BBLAYERS_CONF_PATH=${BASE_PATH}/build/conf/bblayers.conf
 LIBIPHO_LOCAL_CONF_TOKEN="# LIBIPHO_LOCAL_CONF"
 LOCAL_CONF_IS_ADAPTED=`grep "${LIBIPHO_LOCAL_CONF_TOKEN}" ${LOCAL_CONF_PATH}`
 if [ -n "${LOCAL_CONF_IS_ADAPTED}" ]; then
-  echo "local.conf has already been adapted."
+  echo ""
+  echo "Your conf/local.conf has already been adapted by the bootstrap.sh script."
   echo "However, if you change the bootstrap script, make sure that you"
   echo "also delete the file ${LOCAL_CONF_PATH} in order to make sure"
   echo "that your changes are taken into account."
